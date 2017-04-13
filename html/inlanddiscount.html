@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <title>国内折扣</title>
+
+    <!--如发现任何问题，请发送邮件至liivk@outlook.com-->
+
+    <!-- Bootstrap -->
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/inlanddiscount.css">
+</head>
+<body>
+<!--响应式布局-->
+<div class="container-fluid">
+    <!--头部-->
+    <div class="row mmb-header">
+        <!--返回按钮-->
+        <a class="header-return" href="../index.html">
+            <!--返回图标-->
+            <span class="glyphicon glyphicon-menu-left"></span>
+        </a>
+        <!--当前页面名称-->
+        <h3 class="text-center">国内折扣</h3>
+        <!--下载app-->
+        <a class="header-download" href="http://m.manmanbuy.com/?o=download"></a>
+    </div>
+    <!--商品列表主体部分-->
+    <div class="row mmb-main">
+        <!--一个a标签就是一个商品-->
+    </div>
+    <!-- 底部 -->
+    <div class="row mmb-footer">
+        <!--上方链接-->
+        <div class="footer-top">
+            <a href="#">登录</a><a href="#">注册</a><a href="#" id="mmbTop">
+                <span class="glyphicon glyphicon-arrow-up"></span>返回顶部
+            </a>
+        </div>
+        <!--下方文字-->
+        <div class="footer-bottom">
+            <a href="#"><span>手机APP下载</span>&nbsp;慢慢买手机版 </a><span>--掌上比价平台</span>
+            <br>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+</div>
+
+<!--单个商品模版-->
+<script type="text/html" id="mmbGoodsList">
+    {{each result as value key}}
+    <a href="discount.html?productId={{value.productId}}">
+        <div class="col-xs-6 mmb-goods">
+            <div class="mmb-img text-center">
+                {{#value.productImg}}
+            </div>
+            <p class="mmb-title"><strong>{{value.productName}}</strong></p>
+            <p class="mmb-price">{{value.productPrice}}</p>
+            <p class="mmb-source">
+                <span class="shop">{{value.productFrom}}</span> | <span class="time">{{value.productTime}}</span>
+            </p>
+        </div>
+    </a>
+    {{/each}}
+</script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/template/template.js"></script>
+<script src="../JS/inlanddiscount.js"></script>
+</body>
+</html>

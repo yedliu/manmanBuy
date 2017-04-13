@@ -1,0 +1,214 @@
+#header {
+  height: 50px;
+  background-color: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+}
+#header > .logo {
+  padding: 10px;
+  margin-left: 5px;
+  width: 40px;
+  float: left;
+}
+#header > .logo > a > img {
+  max-width: 25px;
+}
+#header > h1 {
+  margin-left: 55px;
+  margin-right: 47px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  padding-top: 8px;
+}
+#header > .appdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 7px;
+}
+#header > .appdown > a > img {
+  max-height: 34px;
+}
+.product {
+  padding: 15px 10px 30px;
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+}
+.product > h3 {
+  font-size: 18px;
+  color: #5a5a5a;
+  font-weight: bold;
+}
+.product > .info > span {
+  color: #999999;
+  line-height: 50px;
+}
+.product > .content {
+  font-size: 16px;
+  color: #606060;
+  font-family: arial;
+  line-height: 24px;
+}
+.product > .content > img {
+  vertical-align: middle;
+  float: right;
+  width: 120px;
+}
+.product > img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.product > .area {
+  margin: 20px 0;
+  text-align: center;
+}
+.product > .area > ul {
+  display: inline-block;
+  padding: 0 5px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  border-color: #f1f1f1 #f1f1f1 #dbdbdb #f1f1f1;
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  width: 150px;
+}
+.product > .area > ul > li {
+  display: inline-block;
+  text-align: center;
+}
+.product > .area > ul > li > a {
+  display: inline-block;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-bottom: 1px dotted #c0c0c0;
+}
+.product > .area > ul > li > a > span {
+  color: #000;
+  float: left;
+}
+.product > .area > ul > li > a > span > strong {
+  color: #f27b04;
+  float: right;
+  padding-left: 45px;
+}
+.product > .golink {
+  text-align: center;
+  height: 40px;
+  background-color: #FF9000;
+  border-radius: 6px;
+  line-height: 40px;
+}
+.product > .golink > img {
+  width: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+.product > .golink > span {
+  vertical-align: middle;
+  color: #fff;
+  font-size: 16px;
+}
+.erweima {
+  width: 100%;
+  text-align: center;
+  margin: 10px auto;
+}
+.erweima > img {
+  width: 100%;
+}
+.comment > .cu-content-pl {
+  padding: 0px 10px;
+}
+.comment > .cu-content-pl > .tit {
+  font-size: 16px;
+  padding: 6px 8px;
+  font-weight: normal;
+  color: #000;
+}
+.comment > .cu-content-pl > .reply > .form {
+  border: 2px solid #ECEAE8;
+  border-radius: 2px;
+  position: relative;
+}
+.comment > .cu-content-pl > .reply > .form > textarea {
+  width: 100%;
+  resize: none;
+  font-size: 14px;
+  color: #666;
+  line-height: 22px;
+  overflow-x: hidden;
+  height: 70px;
+  outline: 0;
+  border: 0;
+}
+.comment > .cu-content-pl > .reply > .form > .ctrl {
+  border-top: 1px solid #f2f2f2;
+  height: 39px;
+  background-color: #fbfbfb;
+}
+.comment > .cu-content-pl > .reply > .form > .ctrl > input {
+  width: 100px;
+  height: 39px;
+  background-color: #ff841d;
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 2px;
+  margin-bottom: 2px;
+  border-bottom: 1px solid #ff841d;
+}
+.comment > .cu-content-pl > .list > ul > li {
+  padding: 18px 10px;
+}
+.comment > .cu-content-pl > .list > ul > li > .userimg {
+  width: 40px;
+  overflow: hidden;
+  float: left;
+}
+.comment > .cu-content-pl > .list > ul > li > .userimg > img {
+  width: 40px;
+  border-radius: 20px;
+  height: 40px;
+}
+.comment > .cu-content-pl > .list > ul > li .con {
+  overflow: hidden;
+  padding-left: 10px;
+}
+.comment > .cu-content-pl > .list > ul > li .con > .name {
+  color: #2e8b01;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.comment > .cu-content-pl > .list > ul > li .con > .name > .username {
+  color: #5997c0;
+  font-size: 13px !important;
+  float: left;
+}
+.comment > .cu-content-pl > .list > ul > li .con > .name > .time {
+  color: #999;
+  font-size: 13px !important;
+  float: right;
+}
+.comment > .cu-content-pl > .list > ul > li .con .content {
+  font-size: 15px !important;
+  color: #606060;
+  line-height: 20px;
+}
+.return {
+  margin-top: 20px;
+  height: 36px;
+  background-color: #e6e6e6;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  line-height: 36px;
+  font-size: 14px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ccc;
+}
+.return > a {
+  color: #000;
+  padding-left: 18px;
+}

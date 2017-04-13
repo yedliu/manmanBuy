@@ -1,0 +1,42 @@
+@charset "UTF-8";
+#accordion {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#accordion > .panel {
+  margin-bottom: -6px;
+  border-top-color: #ccc !important;
+  border-color: transparent;
+}
+#accordion > .panel > .panel-heading {
+  background: #EDEDED;
+}
+#accordion > .panel > .panel-heading > .panel-title > a {
+  color: #000;
+  font-size: 16px;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+}
+#accordion > .panel > .panel-heading > .panel-title > a > img {
+  float: right;
+  width: 30px;
+  height: 20px;
+}
+#accordion > .panel > .panel-collapse > .panel-body {
+  background: #f9f9f9;
+  padding: 0px;
+}
+#accordion > .panel > .panel-collapse > .panel-body > .row > div {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+#accordion > .panel > .panel-collapse > .panel-body > .row > div > a {
+  display: block;
+  width: 100%;
+  color: #333;
+}

@@ -1,0 +1,86 @@
+@charset "UTF-8";
+.borderBottom {
+  border-bottom: 1px solid #bababa;
+}
+.breadcrumb {
+  margin-bottom: 0px;
+}
+.breadcrumb > li {
+  font-size: 14px;
+}
+.breadcrumb > li + li:before {
+  color: #000;
+  font-size: 16px;
+  content: ">\00a0";
+}
+.breadcrumb > .btn {
+  padding: 2px 15px;
+  float: right;
+  background-color: #EBEBF0;
+}
+.product-list > .media > a {
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+.product-list > .media > a > .pic {
+  float: left;
+  display: inline-block;
+  vertical-align: middle;
+}
+.product-list > .media > a > .media-body {
+  font-size: 14px;
+  line-height: 24px;
+  padding-left: 10px;
+}
+.product-list > .media > a > .media-body > .tit {
+  margin-bottom: 35px;
+}
+.product-list > .media > a > .media-body > .price > em {
+  font-size: 18px;
+  color: #ea3900;
+  vertical-align: middle;
+}
+.product-list > .media > a > .media-body > .other {
+  color: #a1a1a1;
+  font-size: 12px;
+}
+.product-list > .media > a > .media-body > .other > em:first-child {
+  margin-right: 10px;
+}
+.page {
+  margin-top: 10px !important;
+  text-align: center;
+}
+.page > .w33 {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+}
+.page > .w33 > a {
+  box-sizing: border-box;
+  background-color: #d4d4d4;
+  border-bottom: 1px solid #bababa;
+  box-shadow: 0 0 1px #666;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 32px;
+  overflow: hidden;
+  padding: 8px 20px;
+}
+.page > .w33 > #selectPage {
+  font-size: 16px;
+  padding: 8px 15px;
+  height: 36px;
+}
+.page > .w33 > #selectPage:focus {
+  border-color: blue;
+}
+.page > .w33 > #selectPage > option {
+  border-color: white;
+}
+.page > .w33 > #selectPage > option:hover {
+  background-color: red;
+}

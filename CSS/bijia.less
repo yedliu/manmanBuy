@@ -1,0 +1,191 @@
+@charset "UTF-8";
+//水平居中方法
+.textAlign() {
+  text-align: center;
+}
+
+//背景颜色
+.backgroundColor {
+  background-color: #ffbb00;
+}
+
+//商品详情设置样式
+#product-bijia {
+  //商品导航面包屑区域
+  > .category-title {
+    > .breadcrumb {
+      margin-bottom: 0px;
+      > li {
+        //给导航设置大小
+        font-size: 14px;
+      }
+      > li + li:before {
+        //给导航添加伪类 > 样式
+        color: #000;
+        font-size: 16px;
+        content: ">\00a0";
+      }
+      > .btn {
+        //给筛选按钮设置样式
+        padding: 2px 15px;
+        float: right;
+        background-color: #EBEBF0;
+      }
+    }
+  }
+  //商品详情部分
+  > .product-bijia {
+    width: 100%;//宽度设置100% 否则就是以子代内容为宽度 无法实现居中
+    > .product-name {
+      //商品标题样式
+      .textAlign();
+      font-size: 17px;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 16px;
+    }
+    > .product-img {
+      //商品图片样式
+      .textAlign();
+    }
+    > .product-collect {
+      //收藏图片样式
+      > a {
+        float: right;
+        margin-top: -40px;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  //比价购买 样式
+  .tab {
+    //设置宽高
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    //设置字体大小
+    font-size: 15px;
+    overflow: hidden;
+    z-index: 0;
+    .backgroundColor();
+    margin-top: 20px;
+    //设置上下边框
+    border-top: 1px solid #c14d00;
+    border-bottom: 1px solid #c14d00;
+
+    li {
+      //li标签不是tab的子元素 不能在前面加 >
+      //内容的w(h)=w(h) - padding- border
+      box-sizing: border-box;
+      float: left;
+      //三等分
+      width: 33.33%;
+      height: 34px;
+      //内容居中
+      .textAlign();
+      .backgroundColor();
+    }
+
+    li.mtab {
+      //表示li标签里类名是mtab的元素
+      //li .mtab 中间有空格表示 li的后代里类名是mtab的元素
+      //中间的li标签设置左右边框
+      border-left: 1px solid #c14d00;
+      border-right: 1px solid #c14d00;
+    }
+  }
+
+  //商城 价格
+  .plist {
+    > a {
+      > table {
+        //表格上边距
+        margin-top: 12px;
+        > tbody {
+          //表格样式
+          display: table-row-group;
+          vertical-align: middle;
+          border-color: inherit;
+          > td {
+            //列的行高
+            line-height: 22px;
+            > .red {
+              //价格 样式
+              color: #d10311;
+              text-align: right;
+              padding-right: 15px;
+            }
+          }
+        }
+      }
+    }
+    > .note {
+      //实际价格样式
+      font-size: 12px;
+      color: #888;
+      margin-top: 8px;
+      padding: 8px 10px;
+      line-height: 18px;
+      border-top: 1px solid #ccc;
+
+    }
+  }
+
+  //网友评论
+  > .product-com-title {
+    > div {
+      //水平垂直居中
+      height: 34px;
+      line-height: 34px;
+      .textAlign();
+      overflow: hidden;
+      //背景
+      background: #dbdbdb;
+      font-size: 14px;
+      border-top: 1px solid #fff;
+      //圆角
+      border-radius: 5px;
+      margin: 5px 6px 2px 6px;
+
+    }
+  }
+  //网友评论 详情 样式
+  > .product-com-list {
+    //内边距
+    padding: 5px;
+
+    > ul {
+      > li {
+        //
+        font-size: 12px;
+        color: #666;
+        padding: 5px;
+        line-height: 18px;
+        margin-top: 3px;
+        border-bottom: 1px solid #ccc;
+        > div {
+          > span {
+            margin: 5px;
+          }
+        }
+      }
+    }
+
+  }
+
+  //更多 区域
+  .more {
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    background-color: #d4d4d4;
+    .textAlign();
+    //圆角
+    border-radius: 5px;
+    margin: 10px 5px;
+  }
+
+}
+
+

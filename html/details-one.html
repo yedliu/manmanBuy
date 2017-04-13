@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+        <title>肯德基详情页面</title>
+        <!-- 引入公共样式 -->
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../CSS/normalize.css">
+        <link rel="stylesheet" href="../CSS/base.css">
+        <link rel="stylesheet" href="../CSS/common.css">
+        <link rel="stylesheet" href="../CSS/animate.css">
+        <!-- 引入自己的样式 -->
+        <link rel="stylesheet" href="../CSS/coupon.css">
+        <!-- 引入模板引擎 -->
+        <script type="text/javascript" src="../lib/jquery/jquery.js"></script>
+        <script type="text/javascript" src="../lib/template/template.js"></script>
+       
+
+        <script type="text/html" id="cou">
+             {{each result as value i}}
+                  <li>
+                     <a href="javascipt:;">
+                        <div class="{{value.ProductId}}">
+                            {{#value.couponProductImg}}
+                        </div>
+                        <div class="info">
+                            <p class="words txt-cut">{{value.couponProductName}}</p>
+                            <em>{{value.couponProductPrice}}</em>
+                            <img src="../images/back1.png" alt="" class="sign">
+                            <p class="date">{{value.couponProductTime}}</p>
+                        </div>
+                     </a>
+                  </li>
+             {{/each}}
+        </script>
+         <script type="text/javascript" >
+              $(function(){
+                //
+                var arr = [];
+                var a=GetQueryString('coid');
+                a=a||0;
+                console.log(a);
+                   // 通过$.ajax进行jsonp请求
+                 $.ajax({
+                     url:'http://139.199.157.195:9090/api/getcouponproduct',
+                     data:{couponid:a},
+                     dataType:'jsonp',
+                     //返回数据
+                     success:function(data){
+                        console.log(data);
+                        //将模板渲染到页面上
+                        var html=template('cou',data);
+                        //将ul添加到页面上
+                        $('.detail').html(html);
+                        //用forEach遍历data中result中的每一项
+                        data.result.forEach(function(v,i) {
+                          //将获取到的每张图片的索引添加到数组中
+                          arr[ i ] = v.couponProductImg;
+                        });
+                        console.log(arr[1]);
+
+                        //获取ul中的li
+                        var lis=$('.detail').children();
+                        //对li中的每一项进行遍历
+                        for(var i=0;i<lis.length;i++){
+                            var index=i;
+                            lis[i].index=i;
+                            //给li添加点击事件
+                            lis[i].onclick=function(){
+                              //把当前图片得索引赋值给index
+                              var index=this.index;  
+                                                     
+                              //把页面溢出的隐藏
+                               $(document.body).css('overflow','hidden');
+                               console.log(index);
+                               //把数组中的每一个img对应的索引渲染到div中
+                              $('#carousel').html($(arr[index]));
+                              //让影藏的遮罩显示出来a
+                              $('.shade').css({
+                                'display':'block'
+                              });
+                              //给遮罩设置点击事件
+                             $('.shade').on('click', function(event) {
+                              //给overflow设置默认值 
+                               $(document.body).css('overflow','visible');
+                               //隐藏遮罩
+                                   $('.shade').css({
+                                'display':'none'
+                               });
+                             });
+                       var left=document.querySelector('.carou-left');
+                       var right=document.querySelector('.carou-right');                     
+                       //给左边的箭头设置点击事件
+                       left.onclick=function(e){                                      
+                        //阻止冒泡
+                         e.stopPropagation();
+                          index--;
+                          console.log(index);
+                          //如过index为-1的时候让索引为第一个的前一个你那让它变成第一个
+                          if(index==-1){
+                            index=0;
+                          }else{
+                            /*鼠标放上的时候改变箭头颜色*/
+                             left.style.color='white';
+                          //清除点击多余的图片
+                          $('#carousel img').remove();
+                          //将arr中对应的图片的索引添加到div中
+                          $('#carousel').html($(arr[index]));
+                          //添加左边的动画
+                           $('#carousel img').addClass('animated fadeInLeft')
+                             }
+                         }      
+                          
+
+                       //给右边绑定点击事件
+                       right.onclick=function(e){
+                        //阻止冒泡 防止点到遮罩 把display变成block
+                         e.stopPropagation();
+                         //计算出接下来应该显示的图片的索引                
+                           index++;
+                           console.log(index);
+                          if(index==arr.length){
+                            index=arr.length-1;                         
+                            }else{
+                              /*鼠标放上的时候改变箭头颜色*/
+                              right.style.color='white';
+                              //清除点击多余的图片
+                              $('#carousel img').remove();
+                              $('#carousel').html($(arr[index]));
+                              //添加左边的动画
+                              $('#carousel img').addClass('animated fadeInRight')
+                               }  
+                          }   
+                            }
+                        }  
+                    }                     
+              
+       })
+                      //获取url参数
+                      function  GetQueryString(name){
+                        //构造一个含有目标参数的正则表达式对象
+                        var reg=new RegExp("(^|&)"+name+"=([^&])(&|$)","i");
+                        //匹配目标参数
+                        var r=window.location.search.substr(1).match(reg);
+                        //返回参数值
+                        if(r!=null) return (r[2]);
+                  }
+              })
+              
+             
+
+
+        </script>
+    </head>
+    <body>
+      <!-- 详情页面头部开始 -->
+        <div id="header">
+          <div class="header-left">
+            <a href="coupon.html"><img src="../images/back.png" alt=""></a>
+          </div>
+           <div class="header-right">
+            <a href=""><img src="../images/header_app.png" alt=""></a>
+          </div>
+          <div class="header-center">
+              <h1>肯德基优惠券</h1>
+          </div> 
+        </div> 
+        <!-- 优惠提示语 -->
+        <div class="tips">
+           --点餐前出示手机中的优惠卷，即可享受优惠
+        </div>
+        <!-- 详情页面头部结束 -->
+        <!-- 详情页面详情部分开始 -->
+        <main class="clearfix">
+           <ul class="detail">
+            <!--  <li>
+                 <a href="">
+                    <div class="pic">
+                        <img src="../images/ic_trend.png" alt="">
+                    </div>
+                    <div class="info">
+                        <p class="words">c24抹茶/抹茶双旋冰激凌 bbbbbbbbbbbbbbbbbb2017年3月</p>
+                        <em>￥7</em>
+                        <img src="../images/back (1).png" alt="" class="sign">
+                        <p class="date">有效期至3月31日</p>
+                    </div>
+                 </a>
+             </li> -->
+             
+           </ul>
+        </main>
+        <!-- 详情页面详情部分结束 -->
+        <!-- 面包部分开始 -->
+            <div class="bread">
+                <p><a href="../index.html">首页</a></p>
+                <p>></p>
+                <p><a href="coupon.html">优惠券</a></p>
+                <p>></p>
+                <p><a href="details-one.html">肯德基优惠券</a></p>
+            </div>
+    <!-- 面包屑部分结束 -->
+        <!-- foot部分start -->
+        <div class="foot">
+            <div class="foot-top">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#">
+                    <i></i> 返回顶部
+                </a>
+            </div>
+            <div class="foot-bottom">
+                <a href="#"><span>手机APP下载</span>&nbsp;慢慢买手机版 </a><span>--掌上比价平台</span>
+                <br>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+        <!-- foot部分end -->
+                
+        <!-- 遮罩层部分 开始-->
+        <div class="shade">
+               <!-- 轮播图开始 -->
+              <div class="carousel">
+                  <div class="carou-left"><p><</p></div>    
+                  <div id="carousel">
+                      <img src="../images/haitao.png" alt="">
+                   </div>
+                  <div class="carou-right"><p>></p></div>  
+              </div>
+            <!-- 轮播图结束 -->
+        </div>  
+        <!-- 遮罩层部分 结束 -->
+
+       
+    
+
+
+
+    </body>
+</html>

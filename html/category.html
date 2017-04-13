@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>产品分类 - 慢慢买比价网</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/icons/logo.png"/>
+    <!--先引入第三方框架-->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <!--再引入自己的less-->
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/common.css">
+    <!-- file 文件打开时使用css-->
+    <!--<link rel="stylesheet" href="../CSS/category.css">-->
+    <!--服务器 打开时使用less-->
+    <link rel="stylesheet/less" href="../CSS/category.less">
+    <!-- 编译less文件的js -->
+    <script src="../lib/less/less.js"></script>
+
+</head>
+
+<body>
+<!-- header头部开始 -->
+<header id='header' class='header'>
+    <div class="logo">
+        <a href="../index.html" title='慢慢买'>
+            <img src="../images/icons/header_logo.png">
+        </a>
+    </div>
+    <div class="appdown">
+        <a href="javascript:void(0)" title="手机app下载">
+            <img src="../images/icons/header_app.png">
+        </a>
+    </div>
+</header>
+<!-- header头部结束 -->
+<!-- search部分strat -->
+<div id='search' class='search'>
+    <!-- 固定格式，在移动端可以跳出虚拟键盘 -->
+    <form action="#">
+        <input type="search" placeholder='请输入你想比价的商品'>
+        <input type="button" value='搜索'>
+    </form>
+</div>
+<!-- search部分end -->
+
+<!--分类区域-->
+<section id="category">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                       aria-expanded="true" aria-controls="collapseOne">
+                        大家电
+                    </a>
+
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4"><a href="#">电视</a></div>
+                        <div class="col-xs-4"><a href="#">空调</a></div>
+                        <div class="col-xs-4"><a href="#">影院</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--底部区域-->
+<!-- foot部分start -->
+<div class="foot">
+    <div class="foot-top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#">
+            <i></i> 返回顶部
+        </a>
+    </div>
+    <div class="foot-bottom">
+        <a href="#"><span>手机APP下载</span>&nbsp;慢慢买手机版 </a><span>--掌上比价平台</span>
+        <br>
+
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+<!-- foot部分end -->
+
+<!--分类标题模板-->
+<script type="text/html" id="categoryTitleTmp">
+    {{each result as value i}}
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{i}}"
+                   aria-expanded="false" aria-controls="collapseOne" data-titleId="{{value.titleId}}">
+                    {{value.title}}<img src="../images/list.png" alt=""/>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse{{i}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body show">
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+<!--分类列表模板-->
+<!--categoryname是参数名 = {{value.category}}是参数的值-->
+<!--点击链接之后跳转到对应的页面中  在a标签属性href中传入跳转的参数-->
+<!--Productlist.html？categoryname={{value.category}}-->
+<script type="text/html" id="categoryTmp">
+    <div class="row">
+        {{each result as value i}}
+        <div class="col-xs-4">
+            <a href="productlist.html?categoryid={{value.categoryId}}&categoryname={{value.category}}&pageid=1">{{value.category}}</a>
+        </div>
+        {{/each}}
+    </div>
+</script>
+
+<!--先引入jQuery bootstra依赖jquery-->
+<script src="../lib/jquery/jquery.js"></script>
+<!--后引入bootstrap的js文件-->
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../lib/template/template.js"></script>
+<!--最后引入自己的js文件-->
+<script src="../JS/category.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+//代码
+    <!-- 下载app的通栏 -->
+    <section class="app-show">
+    	<a class="closefix" href="#"></a>
+    	<i class="icon"></i>
+    	<p class="fixtitle">慢慢买</p>
+    	<p class="">全国比价 查历史价格</p>
+    	<a class="down-btn" href="#">立即打开</a>
+    </section>
+
+//样式
+.app-show{
+	position: fixed;
+	bottom: 0;
+	z-index: 3;
+	width: 100%;
+	height: 60px;
+	background-color: #faf8f5;
+	> .closefix{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 21px;
+		height: 21px;
+		padding: 19px 12px 20px;
+		background-image: url('../images/icons/closefix.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 21px;
+	}
+	> .icon{
+		position: absolute;
+		top: 50%;
+		left: 46px;
+		transform: translateY(-50%);
+		width: 41px;
+		height: 41px;
+		background-image: url('../images/icons/logo.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 41px;
+	}
+	> p{
+		margin: 3px 84px 0 97px;
+		font-size: 14px;
+		line-height: 14px;
+		color: #999;
+	}
+	> .fixtitle{
+		margin-top: 12px;
+		font-size: 18px;
+		line-height: 18px;
+		color: #888;
+	}
+	> .down-btn{
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		transform: translateY(-50%);
+		font-size: 13px;
+		line-height: 13px;
+		background-color: #ff7700;
+		border-radius: 4px;
+		color: #fff;
+		padding: 10px;
+		box-shadow: inset 0 -2px #ff5500;
+	}
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <title>折扣详情</title>
+
+    <!--如发现任何问题，请发送邮件至liivk@outlook.com-->
+
+    <!-- Bootstrap -->
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/discount.css">
+</head>
+<body>
+<!--商品详情页-->
+<div class="container-fluid">
+    <!--头部-->
+    <div class="row mmb-header">
+        <!--返回按钮-->
+        <a class="header-return" href="inlanddiscount.html">
+            <!--返回图标-->
+            <span class="glyphicon glyphicon-menu-left"></span>
+        </a>
+        <!--当前页面名称-->
+        <h3 class="text-center">国内折扣</h3>
+        <!--下载app-->
+        <a class="header-download" href="http://m.manmanbuy.com/?o=download"></a>
+    </div>
+
+    <!-- 底部 -->
+    <div class="row mmb-footer">
+        <!--上方链接-->
+        <div class="footer-top">
+            <a href="#">登录</a><a href="#">注册</a><a href="#" id="mmbTop"><span class="glyphicon glyphicon-arrow-up"></span>返回顶部</a>
+        </div>
+        <!--下方文字-->
+        <div class="footer-bottom">
+            <a href="#"><span>手机APP下载</span>&nbsp;慢慢买手机版 </a><span>--掌上比价平台</span>
+            <br>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+</div>
+
+<!--页面商品详情模版-->
+<script type="text/html" id="mmbDetails">
+    <div class="row mmb-details">
+        <h4 class="mmb-title">{{productName}}</h4>
+        <p class="mmb-price">{{productPinkage}}</p>
+        <p class="mmb-source">{{productFrom}} {{productTime}} {{productTips}}</p>
+        <p class="mmb-desc mmb-txt-cut">{{productInfo}}</p>
+        <div class="mmb-img">
+            {{#productImg}}
+        </div>
+        <div class="mmb-city">
+            <label for="city">城市：</label>
+            <select name="" id="city">
+                <option value="1">北京</option>
+                <option value="1">上海</option>
+            </select>
+            <span class="mmb-city-info">库存：</span><span class="mmb-city-true">无货</span>
+        </div>
+        <a href="#" class="btn btn-warning btn-block mmb-gobuy">前往购买</a>
+    </div>
+    <div class="row mmb-code">
+        <img class="img-responsive" src="../images/icons/mmbweixin2.png" alt="">
+    </div>
+    <div class="row mmb-comment">
+        {{#productComment}}
+    </div>
+</script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../lib/jquery/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/template/template.js"></script>
+<script src="../JS/discount.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+//html
+
+    <!-- header头部开始 -->
+    <header id='header' class='header'>
+        <div class="logo">
+            <a href="../index.html" title='慢慢买'>
+                <img src="../images/icons/header_logo.png">
+            </a>
+        </div>
+        <div class="appdown">
+            <a href="javascript:void(0)" title="手机app下载">
+                <img src="../images/icons/header_app.png">
+            </a>
+        </div>
+    </header>
+    <!-- header头部结束 -->
+    <!-- foot部分start -->
+    <footer class="foot">
+        <div class="foot-top">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#">
+                <i></i> 返回顶部
+            </a>
+        </div>
+        <div class="foot-bottom">
+            <a href="#"><span>手机APP下载</span>&nbsp;慢慢买手机版 </a><span>--掌上比价平台</span>
+            <br>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- foot部分end -->
+
+    <!-- 下载app的通栏 -->
+    <section class="app-show">
+    	<a class="closefix" href="#"></a>
+    	<i class="icon"></i>
+    	<p class="fixtitle">慢慢买</p>
+    	<p class="">全国比价 查历史价格</p>
+    	<a class="down-btn" href="#">立即打开</a>
+    </section>

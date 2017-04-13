@@ -1,0 +1,209 @@
+body {
+  background-color: #f1f1f1;
+  font-family: "Microsoft YaHei";
+}
+.show {
+  display: block;
+}
+#header {
+  height: 50px;
+  background-color: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+  vertical-align: middle;
+}
+#header > .logo {
+  padding: 12px;
+  width: 75%;
+  margin-left: 5px;
+}
+#header > .logo > a {
+  width: 100%;
+}
+#header > .logo > a > img {
+  max-height: 25px;
+}
+#header > .appdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 7px;
+}
+#header > .appdown > a > img {
+  max-height: 34px;
+}
+#search {
+  padding: 10px;
+  background-color: #fff;
+}
+#search > form {
+  position: relative;
+  padding-right: 70px;
+}
+#search > form > input[type="search"] {
+  width: 100%;
+  background-color: #f1f1f1;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  font-size: 13px;
+  padding-right: 50px;
+  padding-left: 20px;
+}
+#search > form > input[type='button'] {
+  background-color: #ff841d;
+  width: 63px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 15px;
+}
+#menu {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+#menu > ul {
+  overflow: hidden;
+}
+#menu > ul > li {
+  text-align: center;
+  margin-top: 15px;
+}
+#menu > ul > li > a {
+  display: inline-block;
+}
+#menu > ul > li > a > img {
+  width: 50px;
+}
+#menu > ul > li > a > p {
+  color: #000;
+  font-size: 12px;
+  margin-top: 5px;
+}
+#menu > ul > li:nth-last-child(-n+4) {
+  display: none;
+}
+.list-tit {
+  height: 35px;
+  background-color: #ff9000;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+  border-bottom: 1px solid #ffc881;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 35px;
+}
+.list-tit > a:first-child {
+  color: white;
+}
+.list-tit > a:last-child {
+  float: right;
+}
+.list-tit > a:last-child > img {
+  width: 20px;
+  margin-bottom: 5px;
+}
+.list-content {
+  background-color: #fff;
+}
+.list-content > ul > li {
+  border-bottom: 1px solid #e7e7e7;
+}
+.list-content > ul > li > a {
+  width: 100%;
+  display: inline-block;
+  padding: 10px;
+  color: #a1a1a1;
+}
+.list-content > ul > li > a :hover {
+  color: #a1a1a1;
+}
+.list-content > ul > li > a > .pic {
+  float: left;
+  width: 110px;
+}
+.list-content > ul > li > a > .pic > img {
+  width: 100px;
+}
+.list-content > ul > li > a > .des {
+  padding-left: 110px;
+}
+.list-content > ul > li > a > .des > .tit {
+  font-size: 15px;
+  color: #333;
+  line-height: 19px;
+  min-height: 60px;
+  text-aligh: left;
+}
+.list-content > ul > li > a > .des > .tit > span {
+  color: #ff6c00;
+}
+.list-content > ul > li > a > .des > .other > span {
+  float: left;
+}
+.list-content > ul > li > a > .des > .other > i {
+  float: right;
+}
+.list-content > ul > li > a > .des > .other > i > img {
+  width: 14px;
+  height: 15px;
+  float: left;
+  vertical-align: middle;
+  margin-top: 3px;
+}
+.list-content > ul > li > a > .des > .other > i > p {
+  float: right;
+  margin-left: 3px;
+}
+.more {
+  background-color: #fff;
+  padding: 10px;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.more > a {
+  display: block;
+  line-height: 30px;
+  background-color: #f4f4f4;
+  font-size: 13px;
+  background-image: linear-gradient(#ffffff, #f4f4f4);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #000;
+}
+.foot > .foot-top {
+  margin-top: 20px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+.foot > .foot-top > a {
+  display: inline-block;
+  width: 30%;
+  font-size: 14px;
+  text-align: center;
+  color: #000;
+  height: 34px;
+  line-height: 34px;
+  border-right: 1px solid #c4c4c4;
+}
+.foot > .foot-top > a:last-child {
+  border-right: none;
+}
+.foot > .foot-bottom {
+  text-align: center;
+  margin: 10px 0;
+}
+.foot > .foot-bottom > a {
+  color: #000;
+}
+.foot > .foot-bottom > a > span {
+  color: red;
+}

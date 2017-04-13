@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/icons/logo.png"/>
+    <title>Document</title>
+    <!--先引入第三方框架-->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <!--再引入自己的less-->
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/common.css"/>
+    <!-- file 文件打开时使用css-->
+    <!--<link rel="stylesheet" href="../CSS/productlist.css">-->
+    <!--服务器 打开时使用less-->
+    <link rel="stylesheet/less" href="../CSS/productlist.less">
+    <!--编译less文件的js -->
+    <script src="../lib/less/less.js"></script>
+
+</head>
+
+<body>
+<!-- header头部开始 -->
+<header id='header' class='header'>
+    <div class="logo">
+        <a href="../index.html" title='慢慢买'>
+            <img src="../images/icons/header_logo.png">
+        </a>
+    </div>
+    <div class="appdown">
+        <a href="javascript:void(0)" title="手机app下载">
+            <img src="../images/icons/header_app.png">
+        </a>
+    </div>
+</header>
+<!-- header头部结束 -->
+<!-- search部分strat -->
+<div id='search' class='search'>
+    <!-- 固定格式，在移动端可以跳出虚拟键盘 -->
+    <form action="#">
+        <input type="search" placeholder='请输入你想比价的商品'>
+        <input type="button" value='搜索'>
+    </form>
+</div>
+<!-- search部分end -->
+<!--商品列表-->
+<section id="productList">
+    <!-- 分类标题区域-->
+    <div class="category-title">
+        <ol class="breadcrumb">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="category.html">全部分类</a></li>
+            <li><a href="#">电视</a></li>
+            <a href="#" class="btn btn-default">筛选</a>
+        </ol>
+
+    </div>
+    <!-- 主体商品区域 -->
+    <div class="product-list">
+        <div class="media">
+            <a href="bijia.html">
+                <div class="pic"><img src="" alt=""/></div>
+                <div class="media-body">
+                    <div class="tit">奥克斯(AUX) KFR-25GW/FK01+3 1匹 挂壁式定速冷暖空调</div>
+                    <div class="price"><em>￥1499.00</em></div>
+                    <div class="other"><em>报价(4)</em><em>评论(2403)</em></div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- 商品的操作  上一页下一页-->
+
+    <div class="clearfix page">
+        <span class="w33"><a data-index="down">上一页</a></span>
+        <span class="w33">
+           <select id="selectPage" name="select">
+               <option value=""></option>
+           </select>
+        </span>
+        <span class="w33"><a data-index="up">下一页</a></span>
+    </div>
+
+
+</section>
+
+<!--底部区域-->
+
+<!-- foot部分start -->
+<div class="foot">
+    <div class="foot-top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#">
+            <i></i> 返回顶部
+        </a>
+    </div>
+    <div class="foot-bottom">
+        <a href="#"><span>手机APP下载</span>&nbsp;慢慢买手机版 </a><span>--掌上比价平台</span>
+        <br>
+
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+<!-- foot部分end -->
+<div id="cav" style="display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba( 0,0,0,0.8);z-index: 99;">
+  <canvas id="canvas" width="300" height="300" style="position:absolute;top:50%;left:50%;transform: translate( -50%, -50%);">
+  您的浏览器不支持canvas
+  </canvas>
+</div>
+
+
+<!-- 主体商品区域模板 -->
+<!--value.categoryId  记录跳转到的商品 页面-->
+<script type="text/html" id="productListTmp">
+    {{each result as value i}}
+    <a href="bijia.html?productId={{value.productId}}">
+        <div class="pic">{{#value.productImg}}</div>
+        <div class="media-body">
+            <div class="tit">{{value.productName}}</div>
+            <div class="price"><em>{{value.productPrice}}</em></div>
+            <div class="other"><em>{{value.productQuote}}</em><em>{{value.productCom}}</em></div>
+        </div>
+    </a>
+    {{/each}}
+</script>
+
+<!--先引入jQuery bootstra依赖jquery-->
+<script src="../lib/jquery/jquery.js"></script>
+<!--后引入bootstrap的js文件-->
+<script src="../lib/template/template.js"></script>
+<!--最后引入自己的js文件-->
+<script src="../JS/canvas.js"></script>
+<script src="../JS/productlist.js"></script>
+
+
+</body>
+
+</html>

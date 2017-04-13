@@ -1,0 +1,275 @@
+@charset "UTF-8";
+
+//颜色变量
+//标题颜色
+@titleColor: #5A5A5A;
+//主色调：商品价格
+@mainColor: #FF6C00;
+//商品发布信息
+@tintColor: #999999;
+//购买按钮
+@btnColor: #FF9000;
+//黑色：评论部分标题
+@blackColor: #000000;
+//评论输入框外围边框
+@boderColor: #ECEAE8;
+//主色调2：城市库存情况、评论提交按钮
+@iptColor: #FF841D;
+//白色：输入框字体颜色
+@whiteColor: #ffffff;
+//评论提交按钮边框
+@moreTintColor: #F2F2F2;
+//评论提交处颜色
+@mostTintColor: #FBFBFB;
+//蓝色：评论用户名
+@blueColor: #5997C0;
+//灰色：评论发布时间
+@grewColor: #99A5C2;
+//文字颜色：评论内容
+@wordColor: #606060;
+
+//函数
+// 单行溢出
+.one-txt-cut() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 多行溢出 手机端使用
+.txt-cut(@line:2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @line;
+  -webkit-box-orient: vertical;
+}
+
+//清理输入框默认样式
+.clearinput() {
+  border: none;
+  outline: none;
+  resize: none;
+  /*清除移动端默认的阴影效果*/
+  -webkit-appearance: none; /*设置表单元素不自带浏览器默认样式*/
+}
+
+// Mixin itself
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+//css样式
+//头部
+.mmb-header {
+  height: 50px;
+  position: relative;
+  background-color: @mainColor;
+  color: @whiteColor;
+  //返回按钮
+  >.header-return {
+    position: absolute;
+    //返回图标
+    >span {
+      font-size:24px;
+      line-height: 50px;
+      left:15px;
+      top: 0;
+      color: @whiteColor;
+    }
+  }
+  //app下载
+  >.header-download {
+    position: absolute;
+    background: url("../images/icons/header_app.png") no-repeat center/32px;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    top: 0;
+  }
+  //页面名称
+  h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight:bold;
+    line-height: 50px;
+  }
+}
+
+//商品详情
+.mmb-details {
+  padding: 10px;
+  //商品标题
+  > .mmb-title {
+    color: @titleColor;
+    font-weight: bold;
+    .txt-cut();
+    height: 40px;
+    margin-bottom: 0;
+  }
+  //商品价格
+  > .mmb-price {
+    color: @mainColor;
+    font-weight: bold;
+  }
+  //商品发布信息
+  > .mmb-source {
+    color: @tintColor;
+    font-size: 12px;
+    padding: 5px;
+    .one-txt-cut();
+  }
+  //商品描述
+  > .mmb-desc {
+    overflow: hidden;
+  }
+  //为描述添加一个只显示两行的样式
+  > .mmb-txt-cut {
+    .txt-cut();
+  }
+  //商品库存信息
+  > .mmb-city {
+    margin: 5px 0 2px 5px;
+    //城市选择
+    > select {
+      border: none;
+      outline: none;
+      resize: none;
+    }
+    //库存名称
+    > .mmb-city-info {
+      font-weight: bold;
+      margin-left:10px;
+    }
+    //库存情况
+    > .mmb-city-true {
+      color: @iptColor;
+    }
+  }
+  //购买按钮
+  > .mmb-gobuy {
+    background-color: @btnColor;
+    padding: 3px;
+  }
+}
+//二维码
+.mmb-code {
+  padding:0 10px;
+}
+//商品评论部分
+.mmb-comment {
+  padding: 10px;
+  //评论部分标题
+  > .tit {
+    font-size: 16px;
+    color: @blackColor;
+    margin: 10px 0;
+  }
+  //评论输入框
+  > .reply>.form {
+    border: 2px solid @boderColor;
+    margin: 0 5px;
+    textarea {
+      .clearinput();
+      width: 100%;
+    }
+    //提交处区域
+    .ctrl {
+      background-color: @mostTintColor;
+      border-top: 1px solid @moreTintColor;
+      .clearfix();
+      //评论提交按钮
+      input {
+        float: right;
+        width: 100px;
+        height: 40px;
+        background-color: @iptColor;
+        color: @whiteColor;
+        box-sizing: border-box;
+        border: 1px solid @moreTintColor;
+        margin-right: -2px;
+        margin-bottom: -2px;
+        margin-top: -1px;
+        .clearinput();
+        font-size: 16px;
+      }
+    }
+  }
+  //评论详情
+  > .list {
+    //头像
+    img {
+      width: 40px;
+      height: 40px;
+    }
+    //用户名
+    .media-heading {
+      color: @blueColor;
+      font-size: 12px;
+      //发布时间
+      span {
+        color: @grewColor;
+      }
+    }
+    //评论内容
+    .mmb-content {
+      color: @wordColor;
+    }
+  }
+}
+
+//页面底部
+.mmb-footer {
+  margin-top: 20px;
+  background-color: #EFEFEF;
+  //上方链接
+  >.footer-top {
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    >a{
+      display: inline-block;
+      width: 30%;
+      font-size: 14px;
+      text-align: center;
+      color: #000;
+      height: 34px;
+      line-height: 34px;
+      border-right: 1px solid #c4c4c4;
+      //返回顶部按钮
+      &:last-child {
+        width: 40%;
+        border-right: none;
+        >span {
+          color: #747474;
+          font-weight:bold;
+        }
+      }
+      &:hover,&:focus {
+        text-decoration: none;
+      }
+    }
+  }
+  //下方文字
+  >.footer-bottom {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 10px;
+    //app链接
+    >a{
+      color: #000;
+      >span{
+        color: red;
+      }
+      &:hover,&:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}

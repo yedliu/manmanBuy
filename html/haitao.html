@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+</head>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="../CSS/base.css">
+<link rel="stylesheet" href="../CSS/common.css">
+<link rel="stylesheet" href="../CSS/moneyctrl.css">
+
+<body>
+    <!-- header头部开始 -->
+    <header id='header' class='header'>
+        <div class="back">
+            <a href="../index.html" class="icon_back">
+                <img src="../images/icons/arrow2.png" alt="">
+            </a>
+        </div>
+        <div class="sqk_center">
+            海淘折扣
+        </div>
+        <div class="appdown">
+            <a href="javascript:void(0)" title="手机app下载">
+                <img src="../images/icons/header_app.png">
+            </a>
+        </div>
+    </header>
+    <!-- header头部结束 -->
+    <!-- 省钱控商品部分开始 -->
+    <div class="mc_list">
+    </div>
+    <!-- 省钱控商品部分结束 -->
+    <!-- 省钱控页面切换开始 -->
+    <div class="pageChange">
+        <div class="left">
+            <a class="underPage">上一页</a>
+        </div>
+        <div class="center">
+            <select name="" id="change">
+                <option value="1">1/15</option>
+                <option value="2">2/15</option>
+                <option value="3">3/15</option>
+                <option value="4">4/15</option>
+                <option value="5">5/15</option>
+                <option value="6">6/15</option>
+                <option value="7">7/15</option>
+                <option value="8">8/15</option>
+                <option value="9">9/15</option>
+                <option value="10">10/15</option>
+                <option value="11">11/15</option>
+                <option value="12">12/15</option>
+                <option value="13">13/15</option>
+                <option value="14">14/15</option>
+                <option value="15">15/15</option>
+            </select>
+        </div>
+        <div class="right">
+            <a class="nextPage">下一页</a>
+        </div>
+    </div>
+    <!-- 省钱控页面切换结束 -->
+    <!-- foot部分start -->
+    <div class="foot">
+        <div class="foot-top">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#">
+                <i></i> 返回顶部
+            </a>
+        </div>
+        <div class="foot-bottom">
+            <a href="#"><span>手机APP下载</span>&nbsp;慢慢买手机版 </a><span>--掌上比价平台</span>
+            <br>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+    <!-- foot部分end -->
+    <div id="cav" style="display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba( 0,0,0,0.8);z-index: 99;">
+        <canvas id="canvas" width="300" height="300" style="position:absolute;top:50%;left:50%;transform: translate( -50%, -50%);">
+            您的浏览器不支持canvas
+        </canvas>
+    </div>
+</body>
+<!-- 引入第三方JS文件 -->
+<script src='../lib/jquery/jquery.min.js'></script>
+<!-- 再引入依赖JQuery的js文件 -->
+<script src='../lib/bootstrap/js/bootstrap.min.js'></script>
+<!-- 引入自己的js文件 -->
+<script src='../JS/moneyctrl.js'></script>
+<script src='../JS/canvas.js'></script>
+<script src='../lib/template/template.js'></script>
+<script type="text/html" id="sqklist">
+    {{each result as value i}}
+    <a href="moneyproduct.html?productid={{value.productId}}">
+      
+      {{#value.productImgSm}}
+        <div class="title">
+          {{value.productName}}
+          <i>{{value.productPinkage}}</i>
+        </div>
+        <div class="other">
+          <span class="more">
+            {{value.productFrom}}|{{value.productTime}}
+          </span>
+          <span class="comment">
+            <i></i>
+            {{getNum(value.productComCount)}}
+          </span>
+        </div>
+      </a> {{/each}}
+</script>
+
+</html>

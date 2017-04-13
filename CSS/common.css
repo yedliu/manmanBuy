@@ -1,0 +1,230 @@
+/*
+* @Author: Administrator
+* @Date:   2017-01-13 11:34:26
+* @Last Modified by:   呆呆
+* @Last Modified time: 2017-03-31 08:55:20
+*/
+
+
+/* 水平垂直居中的公共类 */
+
+.c-center,
+.cw-center:before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* 水平居中公共类 */
+
+.c-center-x,
+.cw-center-x:before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* 垂直居中公共类 */
+
+.c-center-y,
+.cw-center-y:before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* 顶部边框公共类 */
+
+.top-line:before {
+    content: '';
+    width: 100%;
+    height: 0;
+    border-top: 1px solid #ccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* 右边边框公共类 */
+
+.right-line:before {
+    content: '';
+    width: 0;
+    height: 100%;
+    border-right: 1px solid #ccc;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+/*头部*/
+
+#header {
+    height: 50px;
+    background-color: #ff841d;
+    border-bottom: 1px solid #e6e6e6;
+    position: relative;
+    vertical-align: middle;
+}
+
+#header > .logo {
+    padding: 12px;
+    width: 75%;
+    margin-left: 5px;
+}
+
+#header > .logo > a {
+    width: 100%;
+}
+
+#header > .logo > a > img {
+    max-height: 25px;
+}
+
+#header > .appdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px;
+}
+
+#header > .appdown > a > img {
+    max-height: 34px;
+}
+
+
+/*底部*/
+
+.foot > .foot-top {
+    margin-top: 20px;
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.foot > .foot-top > a {
+    display: inline-block;
+    width: 30%;
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+    height: 34px;
+    line-height: 34px;
+    border-right: 1px solid #c4c4c4;
+}
+
+.foot > .foot-top > a:last-child {
+    border-right: none;
+}
+
+.foot > .foot-bottom {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.foot > .foot-bottom > a {
+    color: #000;
+}
+
+.foot > .foot-bottom > a > span {
+    color: red;
+}
+
+/* 搜索框通用样式*/
+#search {
+    padding: 10px;
+    background-color: #fff;
+}
+
+#search > form {
+    position: relative;
+    padding-right: 70px;
+}
+
+#search > form > input[type="search"] {
+    width: 100%;
+    background-color: #f1f1f1;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    font-size: 13px;
+    padding-right: 50px;
+    padding-left: 20px;
+}
+
+#search > form > input[type='button'] {
+    background-color: #ff841d;
+    width: 63px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 15px;
+}
+
+/* app 下载 通用样式*/
+.app-show {
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+  width: 100%;
+  height: 60px;
+  background-color: #faf8f5;
+}
+.app-show > .closefix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 21px;
+  height: 21px;
+  padding: 19px 12px 20px;
+  background-image: url('../images/icons/closefix.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 21px;
+}
+.app-show > .icon {
+  position: absolute;
+  top: 50%;
+  left: 46px;
+  transform: translateY(-50%);
+  width: 41px;
+  height: 41px;
+  background-image: url('../images/icons/logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 41px;
+}
+.app-show > p {
+  margin: 3px 84px 0 97px;
+  font-size: 14px;
+  line-height: 14px;
+  color: #999;
+}
+.app-show > .fixtitle {
+  margin-top: 12px;
+  font-size: 18px;
+  line-height: 18px;
+  color: #888;
+}
+.app-show > .down-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 13px;
+  line-height: 13px;
+  background-color: #ff7700;
+  border-radius: 4px;
+  color: #fff;
+  padding: 10px;
+  box-shadow: inset 0 -2px #ff5500;
+}

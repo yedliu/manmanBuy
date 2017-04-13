@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/icons/logo.png"/>
+    <title>慢慢买</title>
+    <!-- 引入第三方css -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/common.css">
+    <!-- 再引入自己的css文件 -->
+    <link rel="stylesheet" href="CSS/index.css">
+</head>
+
+<body>
+    <!-- header头部开始 -->
+    <header id='header' class='header'>
+        <div class="logo">
+            <a href="index.html" title='慢慢买'>
+                <img src="images/icons/header_logo.png">
+            </a>
+        </div>
+        <div class="appdown">
+            <a href="javascript:void(0)" title="手机app下载">
+                <img src="images/icons/header_app.png">
+            </a>
+        </div>
+    </header>
+    <!-- header头部结束 -->
+    <!-- search部分strat -->
+    <div id='search' class='search'>
+        <!-- 固定格式，在移动端可以跳出虚拟键盘 -->
+        <form action="#">
+            <input type="search" placeholder='请输入你想比价的商品'>
+            <input type="button" value='搜索'>
+        </form>
+    </div>
+    <!-- search部分end -->
+    <div id='menu' class="menu">
+    </div>
+    <!-- list部分start -->
+    <div class="list-tit">
+        <a href="html/moneyctrl.html">
+            <span>超值折扣推荐</span>
+        </a>
+        <a href="html/moneyctrl.html">
+            <img src="images/icons/more.png" alt="">
+        </a>
+    </div>
+    <div class="list-content clearfix">
+    </div>
+    <div class="more">
+        <a href="html/moneyctrl.html">
+            更多优惠信息>>
+        </a>
+    </div>
+    <!-- list部分end -->
+    <div class="list-tit">
+        <a href="html/brandTitle.html">
+            <span>品牌排行</span>
+        </a>
+        <a href="html/brandTitle.html">
+            <img src="images/icons/more.png" alt="">
+        </a>
+    </div>
+    <!-- foot部分start -->
+    <div class="foot">
+        <div class="foot-top">
+            <a href="html/login.html">登录</a>
+            <a href="html/reg.html">注册</a>
+            <a href="#">
+                <i></i> 返回顶部
+            </a>
+        </div>
+        <div class="foot-bottom">
+            <a href="#"><span>手机APP下载</span>&nbsp;慢慢买手机版 </a><span>--掌上比价平台</span>
+            <br>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+    <!-- foot部分end -->
+    <div id="cav" style="display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba( 0,0,0,0.8);z-index: 99;">
+        <canvas id="canvas" width="300" height="300" style="position:absolute;top:50%;left:50%;transform: translate( -50%, -50%);">
+            您的浏览器不支持canvas
+        </canvas>
+    </div>
+</body>
+<!-- 引入第三方JS文件 -->
+<script src='lib/jquery/jquery.min.js'></script>
+<!-- 再引入依赖JQuery的js文件 -->
+<script src='lib/bootstrap/js/bootstrap.min.js'></script>
+<!-- 引入自己的js文件 -->
+<script src="JS/canvas.js"></script>
+<script src='JS/index.js'></script>
+<script src='lib/template/template.js'></script>
+<script type='text/html' id='list'>
+    <ul>
+        {{each result as value i}}
+        <li>
+            <a href="./html/moneyproduct.html?productid={{value.productId}}">
+                <div class='pic'>
+                    {{#value.productImgSm}}
+                </div>
+                <div class='des clearfix'>
+                    <div class='tit'>
+                        {{value.productName}}
+                        <span>{{value.productPinkage}}</span>
+                    </div>
+                    <div class='other'>
+                        <span>{{value.productFrom}}|{{value.productTime}}</span>
+                        <i><img src="images/icons/word.png" alt="">
+                            <p>{{value.productComCount.substr(1,1)}}</p>
+                        </i>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+
+</html>

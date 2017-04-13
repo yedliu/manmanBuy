@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="../images/icons/logo.png"/>
+        <link rel="stylesheet" href="../CSS/base.css">
+        <link rel="stylesheet" href="../CSS/common.css">
+        <!-- <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css"> -->
+        <link rel="stylesheet" href="../CSS/gsproduct.css">
+    </head>
+    <body>
+      <div id="cav" style="display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba( 0,0,0,0.8);z-index: 99;">
+        <canvas id="canvas" width="300" height="300" style="position:absolute;top:50%;left:50%;transform: translate( -50%, -50%);">
+        您的浏览器不支持canvas
+        </canvas>
+      </div>
+       <!-- header头部开始 -->
+      <header id='header' class='header'>
+          <div class="back">
+              <a href="../index.html" title=''>
+                <img src="../images/icons/back.png" alt="">
+              </a>
+          </div>
+          <h3>凑单品</h3>
+          <div class="appdown">
+              <a href="javascript:void(0)" title="手机app下载">
+                  <img src="../images/icons/header_app.png">
+              </a>
+          </div>
+      </header>
+      <!-- header头部结束 -->
+      <!-- 主体部分 -->
+      <main class="coudan-box">
+        <!-- 头部搜索 -->
+        <div class="hd">
+          <!-- 右侧搜索按钮 -->
+          <div class="search fr"></div>
+          <!-- 左侧选择栏 -->
+          <div class="fliter">
+            <ul class="clearfix">
+              <li class="fl w33">
+                <a href="#">京东
+                  <i></i>
+                </a>
+                
+              </li>
+              <li class="fl w33">
+                <a href="#">华北
+                  <i></i>
+                </a>
+              </li>
+              <li class="fl w33">
+                <a href="#">全部价格
+                  <i></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- 下拉框 -->
+          <div class="popsort popbox dn">
+            <ul>
+            </ul>
+          </div>
+          <div class="popcat popbox dn">
+            <ul>
+            </ul>
+          </div>
+          <div class="popprice popbox dn">
+            <ul>
+              <li class="on">
+                <a href="#">全部价格</a>
+              </li>
+              <li>
+                <a href="#">1-3元</a>
+              </li>
+              <li>
+                <a href="#">3-5元</a>
+              </li>
+              <li>
+                <a href="#">5-10元</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 产品信息 -->
+        <div class="bd">
+          <ul class="clearfix">
+            <li class="fl w50">
+              <a href="#">
+                <div class="pic">
+                  <img src="../images/images/5461b6e1N70e46439.jpg" alt="">
+                </div>
+                <div class="title one-txt-cut">【京东超市】新良无铝双效泡打粉50g</div>
+                <div class="other clearfix">
+                  <div class="price fl">
+                    <em>￥</em>0.50
+                  </div>
+                  <div class="btn fr">去凑单
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </main>
+
+    <!-- foot部分start -->
+    <footer class="foot">
+        <div class="foot-top">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#">
+                <i></i> 返回顶部
+            </a>
+        </div>
+        <div class="foot-bottom">
+            <a href="#"><span>手机APP下载</span>&nbsp;慢慢买手机版 </a><span>--掌上比价平台</span>
+            <br>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- foot部分end -->
+  
+      <!-- template模板 -->
+      <script type="text/html" id="tmpshop">
+        {{if result}}
+          {{each result as value}}
+            <li>
+                <a data-shopid="{{value.shopId}}" href="#">{{value.shopName}}</a>
+            </li>
+          {{/each}}
+        {{/if}}
+      </script>
+      <script type="text/html" id="tmpshopArea">
+        {{if result}}
+          {{each result as value}}
+            <li>
+                <a data-areaid="{{value.areaId}}" href="#">{{value.areaName}}</a>
+            </li>
+          {{/each}}
+        {{/if}}
+      </script>
+      <script type="text/html" id="tmpproduct">
+        {{if result}}
+          {{each result as value}}
+            <li class="fl w50">
+              <a href="#">
+                <div class="pic">
+                  <img src="{{value.productImg}}" alt="">
+                </div>
+                <div class="title one-txt-cut">{{value.productName}}</div>
+                <div class="other clearfix">
+                  <div class="price fl">
+                    <em>￥</em>{{value.productPrice.substring(1)}}
+                  </div>
+                  <div class="btn fr">去凑单
+                  </div>
+                </div>
+              </a>
+            </li>
+          {{/each}}
+        {{/if}}
+      </script>
+
+      <!-- 外部js文件 -->
+      <script src="../lib/jquery/jquery.js"></script>
+      <script src="../lib/template/template.js"></script>
+      <script src="../JS/touchscroll.js"></script>
+      <script src="../JS/canvas.js"></script>
+      <script src="../JS/gsproduct.js"></script>
+    </body>
+</html>

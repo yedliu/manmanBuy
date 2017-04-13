@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商城导航</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/icons/logo.png"/>
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/sitenav.css">
+</head>
+<body>
+    <!-- header头部开始 -->
+    <header id='header' class='header'>
+        <div class="back">
+            <a href="../index.html" title=''>
+              <img src="../images/icons/back.png" alt="">
+            </a>
+        </div>
+        <h3>商品导航</h3>
+        <div class="appdown">
+            <a href="javascript:void(0)" title="手机app下载">
+                <img src="../images/icons/header_app.png">
+            </a>
+        </div>
+    </header>
+      <!-- header头部结束 -->
+
+	<!-- 主体部分 -->
+	<main class="sitenav">
+		<div class="link clearfix">
+			<a href="#" class="fl">
+				<img src="../images/images/1.png" alt="">
+				京东商城
+			</a>
+		</div>
+		<div class="nav">
+			<a href="../index.html">首页</a>
+			&nbsp;>&nbsp;
+			<a href="#">商城导航</a>
+		</div>
+	</main>
+    <!-- foot部分start -->
+    <footer class="foot">
+        <div class="foot-top">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#">
+                <i></i> 返回顶部
+            </a>
+        </div>
+        <div class="foot-bottom">
+            <a href="#"><span>手机APP下载</span>&nbsp;慢慢买手机版 </a><span>--掌上比价平台</span>
+            <br>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- foot部分end -->
+	
+	<!-- 模板 -->
+	<script type="text/html" id="sitenav">
+		{{if result}}
+			{{each result as value}}
+				<a href="{{value.navHref}}" class="fl">
+					<img src="{{value.navImg}}" alt="{{value.navId}}">
+					{{value.navTitle}}
+				</a>
+			{{/each}}
+		{{/if}}
+	</script>
+    <!-- 外部js文件 -->
+    <script src="../lib/jquery/jquery.js"></script>
+    <script src="../lib/template/template.js"></script>
+    <script src="../JS/sitenav.js"></script>
+</body>
+</html>

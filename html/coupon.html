@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <title>优惠券详情页面</title>
+    <!-- 引入公共样式 -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="../CSS/normalize.css">
+    <link rel="stylesheet"  href="../CSS/base.css">
+    <link rel="stylesheet"  href="../CSS/common.css">
+    <!-- 引入自己的样式 -->
+    <link rel="stylesheet" href="../CSS/coupon.css">
+
+    <!-- 引入模板引擎 -->
+    <script type="text/javascript" src="../lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="../lib/template/template.js"></script>
+    <script src="../lib/less/less.js"></script>
+    
+    <!-- 模板 -->
+    <script type="text/html" id='cou'>
+       {{if result}}
+          {{each result as value}}
+              <li>
+                 <a href="details-one.html?coid={{value.couponId}}">
+                   <img src="{{value.couponImg}}" alt="">
+                   <span>{{value.couponTitle}}</span>
+                 </a>
+              </li>
+          {{/each}}
+       {{/if}}
+    </script>
+
+    <script type="text/javascript">
+    // 通过$.ajax进行jsonp请求
+        $(function(){
+                $.ajax({
+                    url:'http://139.199.157.195:9090/api/getcoupon',
+                    dataType:'jsonp',
+                    success:function(data){
+                        console.log(data);
+                        //通过模板生成节点
+                        var html=template('cou',data);
+                        //将节点加入到页面中
+                        $('.coupon').html(html);
+                        
+                    }
+                })  
+        })
+
+       /*/*获取url传递过来的参数*/
+      // function  GetQueryString(name){
+      //     //构造一个含有目标参数的正则表达式对象
+      //     var reg=new RegExp("(^|&)"+name+"=([^&])(&|$)","i");
+      //     //匹配目标参数
+      //     var r=window.location.search.substr(1).match(reg);
+      //     //返回参数值
+      //     if(r!=null) return (r[2]);
+      // }
+    </script>
+
+    
+
+</head>
+<body>
+    <!-- 优惠卷头部开始 -->
+   <div id="header">
+        <div class="header-left">
+          <a href="../index.html"><img src="../images/back.png" alt=""></a>
+        </div>
+         <div class="header-right">
+          <a href=""><img src="../images/header_app.png" alt=""></a>
+        </div>
+        <div class="header-center">
+            <h1>优惠券</h1>
+        </div> 
+   </div> 
+   <!-- 优惠券头部结束 -->
+    <!-- 优惠券中间部分开始 -->
+   <main>
+      <ul class="coupon clearfix">
+         
+      </ul>
+   </main>
+   <!-- 优惠券中间部分结束 -->
+   <!-- 面包部分开始 -->
+    <div class="bread">
+        <p><a href="../index.html">首页</a></p>
+        <p>></p>
+        <p><a href="coupon.html">优惠券</a></p>
+    </div>
+    <!-- 面包屑部分结束 -->
+   <!-- foot部分start -->
+    <div class="foot">
+        <div class="foot-top">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#">
+                <i></i> 返回顶部
+            </a>
+        </div>
+        <div class="foot-bottom">
+            <a href="#"><span>手机APP下载</span>&nbsp;慢慢买手机版 </a><span>--掌上比价平台</span>
+            <br>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+    <!-- foot部分end -->
+    
+
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <!-- 引入第三方css -->
+    <!-- <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/moneyproduct.css">
+</head>
+
+<body>
+    <!-- header头部开始 -->
+    <header id='header' class='header'>
+        <div class="logo">
+            <a href="moneyctrl.html" title='慢慢买'>
+                <img src="../images/icons/arrow2.png">
+            </a>
+        </div>
+        <h1>国内折扣</h1>
+        <div class="appdown">
+            <a href="javascript:void(0)" title="手机app下载">
+                <img src="../images/icons/header_app.png">
+            </a>
+        </div>
+    </header>
+    <!-- header头部结束 -->
+    <div class="product">
+    </div>
+    <div class='erweima'>
+        <img src="../images/icons/mmbweixin2.png" alt="">
+    </div>
+    <div class="comment clearfix">
+    </div>
+    <div class="return">
+        <a href="../index.html">
+            首页>
+        </a>
+    </div>
+    <!-- foot部分start -->
+    <div class="foot">
+        <div class="foot-top">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#">
+                <i></i> 返回顶部
+            </a>
+        </div>
+        <div class="foot-bottom">
+            <a href="#"><span>手机APP下载</span>&nbsp;慢慢买手机版 </a><span>--掌上比价平台</span>
+            <br>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+    <!-- foot部分end -->
+</body>
+<script src='../lib/jquery/jquery.min.js'></script>
+<!-- 再引入依赖JQuery的js文件 -->
+<script src='../lib/bootstrap/js/bootstrap.min.js'></script>
+<!-- 引入自己的js文件 -->
+<script src='../JS/moneyproduct.js'></script>
+<script src='../lib/template/template.js'></script>
+<script type='text/html' id='product'>
+    {{if result}} {{each result as value i}}
+    <h3>{{value.productName}}</h3>
+    <div class="info">
+        <span>{{value.productFrom}}</span>
+        <span>{{value.productTime}}</span>
+        <span>{{value.productTips}}</span>
+    </div>
+    <div class='content'>
+        {{#value.productImgSm}}
+        <p>海天的金标生抽酱油，采用了非转基因大豆以及小麦发酵而成，而自然鲜的口感是有些鲜甜鲜甜的感觉，非常适合用来作为日常炒菜用的调味</p>
+        <p>目前京东商城移动端售价10.9元，不错的凑单品，刚需可入，规格1.28L。</p>
+    </div>
+    {{#value.productImgLg}} {{if value.productCity}}
+    <div class="area">
+        {{#value.productCity}}
+    </div>
+    {{/if}}
+    <div class="golink">
+        <img src="../images/icons/car.png" alt="">
+        <span>前往购买</span>
+    </div>
+    {{/each}} {{/if}}
+    <script type='text/html' id='comment'>
+        {{each result as value i}} {{#value.productComment}} {{/each}}
+    </script>
+</script>
+
+</html>

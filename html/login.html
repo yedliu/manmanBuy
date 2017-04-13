@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>慢慢买-用户登陆</title>
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body>
+	<!-- header头部开始 -->
+    <header id='header' class='header'>
+        <div class="logo">
+            <a href="index.html" title='慢慢买'>
+                <img src="../images/icons/header_logo.png">
+            </a>
+        </div>
+        <div class="appdown">
+            <a href="javascript:void(0)" title="手机app下载">
+                <img src="../images/icons/header_app.png">
+            </a>
+        </div>
+    </header>
+    <!-- header头部结束 -->
+	<!-- search部分strat -->
+    <section id='search' class='search'>
+        <!-- 固定格式，在移动端可以跳出虚拟键盘 -->
+        <form action="#">
+            <input type="search" placeholder='请输入你想比价的商品'>
+            <input type="button" value='搜索'>
+        </form>
+    </section>
+    <!-- search部分end -->
+
+	<!-- 主体登陆模块 -->
+	<main class="login">
+		<form class="loginTab">
+			<input type="text" placeholder='用户名'>
+			<input type="password">
+			<input type="submit" value="登录" id="loginbtn">
+			<div class="save">
+				<input type="checkbox" id="check">
+				<label for="check">一个月内自动登陆</label>
+			</div>
+			<div class="prompt">用户名或密码错误！</div>
+			<div class="forget">忘记密码：请电脑登录www.manmanbuy.com找回</div>
+		</form>
+	</main>
+
+    <!-- foot部分start -->
+    <footer class="foot">
+        <div class="foot-top">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#">
+                <i></i> 返回顶部
+            </a>
+        </div>
+        <div class="foot-bottom">
+            <a href="#"><span>手机APP下载</span>&nbsp;慢慢买手机版 </a><span>--掌上比价平台</span>
+            <br>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- foot部分end -->
+    <!-- 下载app的通栏 -->
+    <section class="app-show">
+    	<a class="closefix" href="#"></a>
+    	<i class="icon"></i>
+    	<p class="fixtitle">慢慢买</p>
+    	<p class="">全国比价 查历史价格</p>
+    	<a class="down-btn" href="#">立即打开</a>
+    </section>
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.app-show').on('click', '.closefix', function(event) {
+                event.preventDefault();
+                $('.app-show').css('display','none');
+            });
+        });
+    </script>
+</body>
+</html>

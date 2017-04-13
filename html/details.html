@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--先引入第三方框架-->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <!--再引入自己的less-->
+    <link rel="stylesheet" href="../CSS/normalize.css">
+    <!--<link rel="stylesheet" href="../CSS/productlist.less">-->
+    <!-- 编译less文件的js -->
+    <script src="../lib/less/less.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+<!--头部区域-->
+<!--搜索区域-->
+
+<!--商品列表-->
+<section id="productList">
+    <!-- 分类标题区域-->
+    <div class="category-title">
+        <ol class="breadcrumb">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="#">全部分类</a></li>
+            <li><a href="#">电视</a></li>
+        </ol>
+        <a href="#" class="btn btn-default">筛选</a>
+    </div>
+
+    <div class="product-bijia">
+        <div class="product-name">
+            <!-- 乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视 -->
+        </div>
+        <div class="product-img">
+            <!-- <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png" alt="乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视" width="170"> -->
+        </div>
+        <div class="product-collect">
+            <a href="javascript:setfav(473088);">
+                <img src="http://www.zuyushop.com/wap/images/sc.jpg" width="39" height="39">
+            </a>
+        </div>
+    </div>
+
+</section>
+
+<script type="text/html" id="productListTmp">
+    {{each result as value i}}
+    <div class="product-name">
+       {{value.productName}}
+    </div>
+    <div class="product-img">
+        {{value.productImg}}
+    </div>
+    <div class="product-collect">
+        <a href="javascript:setfav(473088);">
+            <img src="http://www.zuyushop.com/wap/images/sc.jpg" width="39" height="39">
+        </a>
+    </div>
+    {{/each}}
+</script>
+
+
+
+
+
+
+
+<!--底部区域-->
+
+<!--先引入jQuery bootstra依赖jquery-->
+<script src="../lib/jquery/jquery.js"></script>
+<!--后引入bootstrap的js文件-->
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../lib/template/template.js"></script>
+<!--最后引入自己的js文件-->
+<script src="../JS/productlist.js"></script>
+
+
+</body>
+
+</html>

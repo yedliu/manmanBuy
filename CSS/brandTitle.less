@@ -1,0 +1,479 @@
+@charset "UTF-8";
+//mmb-layout 整个页面最小宽度320px
+#mmb-layout {
+    min-width:320px;
+    margin:0 auto;
+    overflow: hidden;
+     .breadcrumb {
+        margin-bottom: 0px;
+        padding:0;
+        line-height: 38px;
+        .active {
+            color:#000;
+        }
+    }
+}
+#all {
+    width: 100%;
+}
+// 首页/全部分类
+#mmb-top {
+    width: 100%;
+    height: 38px;
+    background-color: #ebebeb;
+    // line-height: 38px;
+    font-size:13px;
+    border-top:1px solid #ebebeb;
+    border-bottom:1px solid #ccc;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ebebeb));
+    a {
+        color:#5a5a5a;
+        padding: 0 10px;
+    }
+}
+//热门品牌排行
+#mmb-billboard {
+    width: 100%;
+    padding:0 5px;
+    margin-top: 5px;
+    h1 {
+        width: 100%;
+        height: 40px;
+        border:1px solid #ccc;
+        line-height: 40px;
+        font-size:16px;
+        padding-left: 10px;
+        background-color: #eee;
+        color:#874604;
+    }
+}
+//品牌列表分类
+#mmb-list {
+    width: 100%;
+    padding:0 10px;
+    background: #f5f5f5;
+    ul {
+        width: 100%;
+        li {
+            width: 100%;
+            border-bottom:1px solid #ccc;
+            position: relative;
+            a {
+                display: block;
+            }
+            h3 {
+                width: 100%;
+                font-size:16px;
+                color:#000;
+                height: 40px;
+                line-height: 40px;
+                font-weight:700;
+            }
+            i {
+                position: absolute;
+                right: 15px;
+                top: 10px;
+                font-size:20px;
+                color:#666;
+            }
+        }
+    }
+   
+}
+//公共样式
+.good{
+        width:100%;
+        height: 36px;
+        background: #f3f3f3;
+        border-top:1px solid #c8c8c8;
+        border-bottom:1px solid #c8c8c8;
+        h2 {
+            line-height: 36px;
+            height: 36px;
+            padding-left:10px;
+            color: #874604;
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+//品牌详情
+#details{
+    width: 100%;
+    ul {
+        width: 100%;
+                li:nth-child(1) a i {
+                    background: red;
+                }
+                li:nth-child(2) a i {
+                    background: darkorange;
+                }
+                li:nth-child(3) a i {
+                    background: greenyellow
+                }
+        li {
+            border-bottom:1px solid #e7e7e7;
+            position: relative;
+            padding:10px;
+            
+            a {
+                width: 100%;
+               
+                i {
+                    position: absolute;
+                    top: 20px;
+                    left: 6px;
+                    width: 20px;
+                    height: 20px;
+                    text-align: center;
+                    line-height: 20px;
+                    font-size:14px;
+                    color:#fff;
+                    background-color: #c9c9c9;
+                }
+                 
+                .del {
+                    margin-left: 30px;
+                    h3 {
+                        font-size:16px;
+                        color:#000;
+                    }
+                    span {
+                        position: absolute;
+                        right: 10px;
+                        top: 30px;
+                        font-size:20px;
+                    }
+                }
+            }
+        }
+    }
+}
+//产品销量排行
+#sales {
+    width: 100%;
+    ul {
+        width: 100%;
+        li {
+            padding:10px;
+            border-bottom:1px solid #ccc;
+            a {
+                width: 100%;
+                .pic {
+                    width: 100px;
+                    height: 100px;
+                }
+                .info {
+                    margin-left: 115px;
+                    font-size: 14px;
+                    line-height: 24px;
+                    // padding: 5px;
+                    p {
+                        color: #333333;
+                        line-height: 22px;
+                        width: 100%;
+                        min-height: 44px;
+                        word-break: break-all;
+                    }
+                    .price {
+                        margin-top: 5px;
+                        height: 25px;
+                        // width: 100%;
+                        em {
+                            font-size: 18px;
+                            color: #ea3900;
+                            vertical-align: middle;
+                            float: left;
+                        }
+                        span {
+                            // float:right;
+                            // display: block;
+                            margin-top: 2px;
+                            // padding-left: 5px;
+                            .wx {
+                                font-size: 18px;
+                                color: #ea3900;
+                                vertical-align: middle;
+                                float: left;
+                            }
+                        }
+                    }
+                    .comment {
+                        margin-top: 5px;
+                        font-size:12px;
+                        em {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//产品评论
+#comment {
+    width: 100%;
+    ul {
+        width: 100%;
+        li {
+            padding:10px;
+            border-bottom:1px solid #e7e7e7;
+            a {
+                width: 100%;
+                display: block;
+                margin-bottom: 10px;
+                .pic {
+                width: 80px;
+                height: 80px;
+                img {
+                    width: 100%;
+
+                }  
+               }
+               .info1 {
+                    margin-left: 95px;
+                    font-size: 14px;
+                    padding:5px;
+                     p {
+                        color: #999;
+                        line-height: 22px;
+                        width: 100%;
+                        margin-bottom:20px;
+                        word-break: break-all;
+                    }
+                }
+            }
+            .pl {
+                background: #f8f8f8;
+                padding: 10px;
+                border: 1px solid #e7e7e7;
+                position: relative;
+                a {
+                    display: block;
+                    .name {
+                            color: #4f6900;
+                            .xm {
+                                font-size:14px;
+                            }
+                            .time {
+                                float:right;
+                                font-size:14px;
+                            }
+                    }
+                    .con {
+                        margin-top: 5px;
+                    }
+                }
+            }
+            .pl::after {
+                content: '';
+                width: 0;
+                height: 0;
+                position: absolute;
+                left: 30px;
+                top: -7px;
+                border-bottom: 8px solid #f8f8f8;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+            }
+            .pl:before {
+                content: '';
+                width: 0;
+                height: 0;
+                position: absolute;
+                left: 29px;
+                top: -8px;
+                border-bottom: 8px solid #e7e7e7;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+            }
+        }
+    }
+}
+// 详情商品列表
+#prd {
+    width: 100%;
+    background-color: #fff;
+    margin-top: 10px;
+    .top {
+       width: 100%;
+       height: 36px;
+    //    border-top:1px solid #ccc;
+       border-bottom:1px solid #ccc;
+       background-color: #ccc;
+        a {
+        float:left;
+        line-height: 36px;
+        font-size:14px;
+        padding:0 5px;
+    }
+   }
+    ul {
+        width: 100%;
+        padding:0 8px;
+        .sel {
+            // width: 100%;
+            height: 40px;
+            text-align: center;
+            span {
+                line-height: 40px;
+                font-size:14px; 
+                width: 25%;
+                float:left;
+            }
+        }
+        .li {
+            width: 100%;
+            a {
+                display: block;
+                .pic {
+                    width: 120px;
+                    height: 120px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .info {
+                    margin-left: 130px;
+                    // padding-top: 15px;
+                    // padding-bottom:27px;
+                    height: 120px;
+                    .info1{
+                        font-size:14px;
+                        font-weight: 600;
+                    }
+                    .info2 {
+                        span {
+                            color:#ed0000;
+                            font-size:18px;
+                            
+                        }
+                        .info3 {
+                            span {
+                                font-size:12px;
+                                color:#c8c8c8;
+                            }
+                            em {
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#introduce {
+    width: 100%;
+    margin-top: 5px;
+    position: relative;
+    .save {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 45px;
+        right: 12px;
+        background:greenyellow;
+        color:#fff;
+        text-align: center;
+        border-radius: 50%;
+        line-height: 40px;
+    }
+    
+   .top {
+       width: 100%;
+       height: 36px;
+       border-top:1px solid #ccc;
+       border-bottom:1px solid #ccc;
+        a {
+        float:left;
+        line-height: 36px;
+        font-size:14px;
+        padding:0 5px;
+    }
+   }
+   .box {
+       background-color: #fff;
+       
+       .pic {
+           margin:0 auto;
+           width: 160px;
+           height: 160px;
+       }
+       .tit {
+           width: 100%;
+           font-size: 16px;
+           font-weight: 500;
+       }
+       .tit1 {
+           height: 32px;
+           border-top: 1px solid red;
+           border-bottom:1px solid red;
+           background-color: #fff;
+           margin-bottom: 5px;
+           i:nth-child(1){
+              background-color: #ffbb00;
+              background: -webkit-gradient(linear,0 0,0 100%,from(#ffa632),to(#ff9000));
+           }
+           i:nth-child(2){
+              background-color: #ffbb00;
+              border-left: solid 1px #c14d00;
+              border-right: solid 1px #c14d00;
+              background: -webkit-gradient(linear,0 0,0 100%,from(#ffd050),to(#ffbb00));
+           }
+           i:nth-child(3){
+              background-color: #ffbb00;
+              background: -webkit-gradient(linear,0 0,0 100%,from(#ffd050),to(#ffbb00));
+           }
+           i {
+               font-size:16px;
+               line-height: 32px;
+               color:#fff;
+               height: 30px;
+               float:left;
+               padding:0 20px;
+               width: 33.33%;
+           }
+           
+       }
+       .tip {
+           font-size:12px;
+           line-height: 18px;
+           color: #888;
+           padding: 8px 10px;
+           border-top:1px solid #ccc;
+           border-bottom:3px solid #666;
+       }
+   }
+   
+}
+.discuss {
+        .tip1 {
+            height: 34px;
+            line-height: 34px;
+            text-align: center;
+            overflow: hidden;
+            background: #dbdbdb;
+            font-size: 14px;
+            border-top: 1px solid #fff;
+        }
+        ul {
+            padding-top: 10px;
+            li {
+                margin-top: 10px;
+                .name {
+                    padding:5px;
+                }
+                
+                .comf {
+                    padding:0 5px;
+                    span:nth-child(1){
+                    color: orange;
+                }
+                }
+                .return {
+                    color:#999;
+                    padding:5px 0 0 5px;
+                }
+            }
+        }
+   }

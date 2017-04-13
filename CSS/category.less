@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+//分类区域
+//修改bootstrap引用的模板样式
+#accordion{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  >.panel{
+    margin-bottom: -6px;
+    border-top-color: #ccc !important;
+    border-color: transparent;
+    >.panel-heading{
+      background: #EDEDED;
+      >.panel-title{
+        >a{
+          color: #000;
+          font-size: 16px;
+          display: block;
+          font-weight: bold;
+          text-decoration: none;
+          >img{
+            float: right;
+            width: 30px;
+            height:20px;
+          }
+
+        }
+      }
+    }
+    >.panel-collapse{
+      >.panel-body{
+        background: #f9f9f9;
+        padding:0px;
+        >.row{
+          >div{
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-right: 1px solid #e0e0e0;
+            border-bottom:1px solid #e0e0e0;
+            >a{
+              display: block;
+              width: 100%;
+              color: #333;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

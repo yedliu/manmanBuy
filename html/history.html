@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <!-- 引入第三方css -->
+    <link rel="stylesheet" href="../lib/bootstrap/
+css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/history.css">
+</head>
+
+<body>
+    <!-- header头部开始 -->
+    <header id='header' class='header'>
+        <div class="logo">
+            <a href="../index.html" title='慢慢买'>
+                <img src="../images/icons/arrow2.png">
+            </a>
+        </div>
+        <h1>历史价格查询</h1>
+    </header>
+    <div class='content'>
+        <p>商品链接</p>
+        <input type="text" placeholder='请通过购物App中使用分享或浏览器打开商品页面获取商品链接'>
+        <div class="btn">
+            <!-- Small modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">查询历史价格</button>
+            <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <p>请通过京东、天猫等 App分享商品链接到输入框！</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <input type="submit" value="查询历史价格"> -->
+            <input type="button" value="重置">
+        </div>
+        <div class="step">
+            两步操作即可识别商品真假促销
+            <p>1.打开购物APP（如手机淘宝）复制商品链接</p>
+            <p>2.打开慢慢买APP，系统自动识别查历史价</p>
+        </div>
+    </div>
+    <!-- header头部结束 -->
+    <section class="app-show">
+        <a class="closefix" href="#"></a>
+        <i class="icon"></i>
+        <p class="fixtitle">慢慢买</p>
+        <p class="">全国比价 查历史价格</p>
+        <a class="down-btn" href="#">立即打开</a>
+    </section>
+</body>
+<script src='../lib/jquery/jquery.min.js'></script>
+<!-- 再引入依赖JQuery的js文件 -->
+<script src='../lib/bootstrap/js/bootstrap.min.js'></script>
+<!-- 引入自己的js文件 -->
+
+</html>

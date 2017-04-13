@@ -1,0 +1,200 @@
+@charset "UTF-8";
+.mmb-header {
+  height: 50px;
+  position: relative;
+  background-color: #FF6C00;
+  color: #ffffff;
+}
+.mmb-header > .header-return {
+  position: absolute;
+}
+.mmb-header > .header-return > span {
+  font-size: 24px;
+  line-height: 50px;
+  left: 15px;
+  top: 0;
+  color: #ffffff;
+}
+.mmb-header > .header-download {
+  position: absolute;
+  background: url("../images/icons/header_app.png") no-repeat center / 32px;
+  width: 50px;
+  height: 50px;
+  right: 0;
+  top: 0;
+}
+.mmb-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 50px;
+}
+.mmb-details {
+  padding: 10px;
+}
+.mmb-details > .mmb-title {
+  color: #5A5A5A;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 40px;
+  margin-bottom: 0;
+}
+.mmb-details > .mmb-price {
+  color: #FF6C00;
+  font-weight: bold;
+}
+.mmb-details > .mmb-source {
+  color: #999999;
+  font-size: 12px;
+  padding: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mmb-details > .mmb-desc {
+  overflow: hidden;
+}
+.mmb-details > .mmb-txt-cut {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.mmb-details > .mmb-city {
+  margin: 5px 0 2px 5px;
+}
+.mmb-details > .mmb-city > select {
+  border: none;
+  outline: none;
+  resize: none;
+}
+.mmb-details > .mmb-city > .mmb-city-info {
+  font-weight: bold;
+  margin-left: 10px;
+}
+.mmb-details > .mmb-city > .mmb-city-true {
+  color: #FF841D;
+}
+.mmb-details > .mmb-gobuy {
+  background-color: #FF9000;
+  padding: 3px;
+}
+.mmb-code {
+  padding: 0 10px;
+}
+.mmb-comment {
+  padding: 10px;
+}
+.mmb-comment > .tit {
+  font-size: 16px;
+  color: #000000;
+  margin: 10px 0;
+}
+.mmb-comment > .reply > .form {
+  border: 2px solid #ECEAE8;
+  margin: 0 5px;
+}
+.mmb-comment > .reply > .form textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  /*清除移动端默认的阴影效果*/
+  -webkit-appearance: none;
+  /*设置表单元素不自带浏览器默认样式*/
+  width: 100%;
+}
+.mmb-comment > .reply > .form .ctrl {
+  background-color: #FBFBFB;
+  border-top: 1px solid #F2F2F2;
+}
+.mmb-comment > .reply > .form .ctrl:before,
+.mmb-comment > .reply > .form .ctrl:after {
+  content: " ";
+  display: table;
+}
+.mmb-comment > .reply > .form .ctrl:after {
+  clear: both;
+}
+.mmb-comment > .reply > .form .ctrl input {
+  float: right;
+  width: 100px;
+  height: 40px;
+  background-color: #FF841D;
+  color: #ffffff;
+  box-sizing: border-box;
+  border: 1px solid #F2F2F2;
+  margin-right: -2px;
+  margin-bottom: -2px;
+  margin-top: -1px;
+  border: none;
+  outline: none;
+  resize: none;
+  /*清除移动端默认的阴影效果*/
+  -webkit-appearance: none;
+  /*设置表单元素不自带浏览器默认样式*/
+  font-size: 16px;
+}
+.mmb-comment > .list img {
+  width: 40px;
+  height: 40px;
+}
+.mmb-comment > .list .media-heading {
+  color: #5997C0;
+  font-size: 12px;
+}
+.mmb-comment > .list .media-heading span {
+  color: #99A5C2;
+}
+.mmb-comment > .list .mmb-content {
+  color: #606060;
+}
+.mmb-footer {
+  margin-top: 20px;
+  background-color: #EFEFEF;
+}
+.mmb-footer > .footer-top {
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+.mmb-footer > .footer-top > a {
+  display: inline-block;
+  width: 30%;
+  font-size: 14px;
+  text-align: center;
+  color: #000;
+  height: 34px;
+  line-height: 34px;
+  border-right: 1px solid #c4c4c4;
+}
+.mmb-footer > .footer-top > a:last-child {
+  width: 40%;
+  border-right: none;
+}
+.mmb-footer > .footer-top > a:last-child > span {
+  color: #747474;
+  font-weight: bold;
+}
+.mmb-footer > .footer-top > a:hover,
+.mmb-footer > .footer-top > a:focus {
+  text-decoration: none;
+}
+.mmb-footer > .footer-bottom {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 10px;
+}
+.mmb-footer > .footer-bottom > a {
+  color: #000;
+}
+.mmb-footer > .footer-bottom > a > span {
+  color: red;
+}
+.mmb-footer > .footer-bottom > a:hover,
+.mmb-footer > .footer-bottom > a:focus {
+  text-decoration: none;
+}

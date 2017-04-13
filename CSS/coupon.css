@@ -1,0 +1,242 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+/*优惠卷头部样式*/
+#header{
+    height: 50px;
+    background-color:#F4483E;
+   
+    /*position:relative;*/
+}
+
+#header .header-left{
+    width: 50px;
+    height: 50px;
+    float: left;
+    
+}
+#header .header-left img{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+#header .header-center{
+  height: 50px;
+  padding-top:15px;
+  text-align: center;
+ 
+}
+#header .header-center h1{
+    width: 100%;
+    color:white;
+    font-weight:700;
+    font-size:20px;  
+    left:50%;
+    margin-left:-22px; 
+
+}
+
+#header .header-right{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    float:right;
+    padding-top:5px;
+}
+#header .header-right a{
+   width: 40px;
+   height: 40px;
+}
+#header .header-right img{
+    width:40px;
+    height: 40px;
+}
+
+/* 优惠券功能样式 */
+main{
+    margin:20px 0;
+}
+.coupon{
+  text-align: center;
+}
+.coupon li{
+     margin:5px;
+     display:inline-block;
+     list-style:none;
+     width: 150px;
+     height: 100px;
+     border:1px solid #EEEEEE;
+     padding-top:10px;
+    text-align: center;
+}
+
+.coupon li a{
+   display:inline-block;
+   width: 70px;
+}
+.coupon li img{
+    width: 70px;
+    height: 50px;
+}
+
+/*面包屑样式*/
+.bread{
+    color:black;
+    height:40px;
+    line-height: 40px;
+    border:1px solid #EBEBEB;
+    padding-left:10px;
+    font-size:15px;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ebebeb));
+;
+}
+.bread p{
+   display:inline-block;
+}
+.bread a{
+   color:black;
+}
+
+/*优惠提示语样式*/
+.tips{
+  color:#999;
+  font-size:12px;
+  text-align: center;
+  margin:8px 0;
+}
+
+/*优惠详情样式 1*/
+ .clearfix .detail{
+  /*border-bottom:1px solid gray;*/
+  display:block;
+  list-style:none;
+
+ }
+ul li{
+  float: left;
+  width: 100%;
+}
+ ul a{
+    text-decoration: none;
+    /*background-color:pink;*/
+    display:block;
+    width: 100%;
+}
+}
+
+ ul a:hover{
+    color:black;
+ }
+
+ul li img{
+    float: left;
+    width: 120px;
+    height: 80px;
+    margin-top:10px;
+    padding:0 10px;
+}
+
+ ul li .info{
+    padding: 5px 35px 10px 120px;
+    border-bottom:1px solid #E7E7E7;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 90px;
+ }
+ul li .date{
+  color:#EE7700;
+   margin-top:5px;
+}
+ul li .words{
+     font-size:14px; 
+     margin:5px 0; 
+}
+ul li .sign{
+    margin: 0;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    right: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+ 
+ul li em{
+  margin-top: 5px; 
+    font-size:15px;
+    line-height: 24px;
+    font-weight:700;
+}
+
+
+/*遮罩层部分样式*/
+.shade{
+      width: 100%;
+      height: 100%;
+      position:fixed;
+      left: 0;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      display:none;
+}
+
+/*轮播图样式*/
+.carousel{
+    position:absolute;
+    left:50%;
+    margin-left:-100px;
+    top:50%;
+    margin-top:-80px;
+    /*display:none;*/
+
+}
+.carousel div {
+    width: 200px;
+    height: 170px;
+    list-style:none;
+    display:block;
+    width: 200px;
+    height: 160px;
+}
+
+.carousel img{
+    width: 200px;
+    height: 160px;
+
+}
+.carousel .carou-left{
+    color:gray;
+    font-size:60px;
+    position:absolute;
+    left: -80px;
+    top: 50%;
+    width: 45px;
+    margin-top: -30px;
+    height: 60px;
+    background-color:#232323;
+    }
+.carousel p{
+  /* left: 40px;
+    top: 50%;*/
+    width: 45px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    z-index: 999;
+}
+.carousel .carou-right{
+    color:gray;
+    font-size:60px;
+    position:absolute;
+    right: -80px;
+    top: 50%;
+    width: 45px;
+    margin-top: -30px;
+    height: 60px;
+    background-color:#232323;
+
+}
